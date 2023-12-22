@@ -59,6 +59,11 @@ doors.forEach((door, index) => {
             const daysRemaining = Math.ceil((openDate- now) / (1000 * 60 * 60 * 24));
             console.log(openDate, now, daysRemaining)
             alert(`이 카드는 ${daysRemaining}일 후에 열 수 있어요!`);
+
+            const doorDiv = document.querySelector(`.day-${index + 1}`)
+            const checkCard = doorDiv.querySelector('input')
+
+            checkCard.checked = true;
         }
     })
 })
