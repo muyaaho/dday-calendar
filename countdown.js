@@ -38,7 +38,7 @@ doors.forEach((door, index) => {
         const openDate = new Date(2023, 11, index + 1);
 
         // 현재 날짜가 열 수 있는 날짜 이후인지 확인
-        if (now.getTime() > openDate.getTime()) {
+        if (now.getTime() >= openDate.getTime()) {
             // 여기에 모달을 열거나 특정 동작을 수행하는 코드 추가
 
             // 상위 div의 class 번호를 찾아서 image url에 사용합니다.
