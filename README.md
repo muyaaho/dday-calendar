@@ -10,3 +10,8 @@
 
 
 **완성**: https://muyaaho.github.io/dday-calendar/
+
+
+**추가할 기능**
+- [ ] 카카오톡, 인스타그램 공유하기
+- [ ] 2024로 바꾸기 
