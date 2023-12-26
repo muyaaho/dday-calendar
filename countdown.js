@@ -41,8 +41,16 @@ doors.forEach((door, index) => {
         // 현재 한국 시간 얻어오기
         const now = new Date(new Date().toLocaleDateString("en-US", {timeZone: "Asia/Seoul"}));
 
+        const n_year = now.getFullYear();
+        const n_month = now.getMonth();
+        const n_day = now.getDate();
+
         // 각 날짜에 해당하는 날짜 계산
-        const openDate = new Date(2023, 11, index + 1);
+        const openDate = new Date(n_year, 11, index + 1);
+
+        if (n_month>=11 && n_day>=25) {
+            openDate.setFullYear(openDate.getFullYear() + 1)
+        }
 
         // 현재 날짜가 열 수 있는 날짜 이후인지 확인
         if (now.getTime() >= openDate.getTime()) {
