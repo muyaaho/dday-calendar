@@ -1,10 +1,17 @@
-// 목표 날짜 설정 (예시: 2023년 1월 1일)
-const targetDate = new Date("2023-12-25");
 
 function updateCountdown() {
     // 현재 한국 시간을 얻어오기
     const now = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Seoul" }));
 
+    //<br>test:<br>${now} <br>${t_year} ${n_month}, ${n_day}, <br>${targetDate}
+    const n_year = now.getFullYear();
+    const n_month = now.getMonth();
+    const n_day = now.getDate();
+    const targetDate = new Date(n_year, 11, 25);
+    
+    if (n_month>=11 && n_day>=25) {
+        targetDate.setFullYear(targetDate.getFullYear() + 1)
+    }
 
     // 남은 시간 계산
     const timeRemaining = targetDate - now;
